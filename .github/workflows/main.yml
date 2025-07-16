@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub
 
 on:
   push:
@@ -7,13 +7,13 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4.2.2
 
-      - name: SetUp Node 
+      - name: Setup Node 
         uses: actions/setup-node@v3.9.1
 
       - name: Install Dependencies
